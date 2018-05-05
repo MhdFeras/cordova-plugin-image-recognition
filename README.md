@@ -23,7 +23,7 @@ to use this plugin you have to get EasyAR SDK License Key for each application
 - go to https://www.easyar.com/
 - __Sign in__ if you already have account or __Sign up__ for new account
 - in __SDK Authorization__ section click on __Add SDK License Key__
-- chosee type : __EasyAR SDK Basic: Free and no watermark__ , set your __App Name__ and __PackageName (Android)__
+- choose type : __EasyAR SDK Basic: Free and no watermark__ , set your __App Name__ and __PackageName (Android)__
 - click __Confirm__
 - that will generate __SDK License Key__ for your application 
 
