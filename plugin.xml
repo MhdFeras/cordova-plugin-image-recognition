@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-image-recognition"
+        version="0.0.1" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>ImageRecognition</name>
+
+    <engines>
+        <engine name="cordova" version=">=2.8.0" />
+    </engines>
+
+
+    <js-module name="ImageRecognition" src="www/ImageRecognition.js">
+        <clobbers target="ImageRecognition" />
+    </js-module>
+
+    <platform name="android">
+    
+        <lib-file src="src/android/libs/EasyAR.jar" />
+        <source-file src="src/android/jniLibs/armeabi-v7a/libEasyAR.so" target-dir="src/jniLibs/armeabi-v7a/" />
+        <source-file src="src/android/jniLibs/arm64-v8a/libEasyAR.so" target-dir="src/jniLibs/arm64-v8a/" />
+
+        <source-file src="src/android/jniLibs/armeabi-v7a/libEasyAR.so" target-dir="libs/armeabi-v7a/" />
+        <source-file src="src/android/jniLibs/arm64-v8a/libEasyAR.so" target-dir="libs/arm64-v8a/" />
+
+        <resource-file src="src/android/res/layout/activity_main.xml" target="res/layout/activity_main.xml" />
+
+        <resource-file src="src/android/res/values/colors.xml" target="res/values/colors.xml" />
+        <resource-file src="src/android/res/values/dimens.xml" target="res/values/dimens.xml" />
+        <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml" />
+
+        <source-file src="src/android/OpenActivity.java" target-dir="src/ImageRecognition/" />
+        <source-file src="src/android/ArActivity.java" target-dir="src/ImageRecognition/" />
+
+        <source-file src="src/android/HelloAR.java" target-dir="src/ImageRecognition/" />
+        <source-file src="src/android/GLView.java" target-dir="src/ImageRecognition/" />
+        <source-file src="src/android/BoxRenderer.java" target-dir="src/ImageRecognition/" />
+
+        <framework src="com.android.support:appcompat-v7:23+" />
+
+        <config-file target="res/xml/config.xml" parent="/widget">        
+            <feature name="OpenActivity">
+                <param name="android-package" value="cordova.plugin.image.recognition.OpenActivity"/>
+            </feature> 
+        </config-file> 
+        
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+            android:label="ArActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:name="cordova.plugin.image.recognition.ArActivity">
+            </activity>
+        </config-file>
+
+        <config-file target="res/values/strings.xml" parent="/resources">
+            <string name="hello_world">_</string>
+            <string name="action_settings">_</string>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        
+    </platform>
+</plugin>

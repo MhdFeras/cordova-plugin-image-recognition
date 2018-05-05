@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-image-recognition",
+  "version": "1.0.0",
+  "description": "android cordova wrapper for EastAR used for image detiction",
+  "cordova": {
+    "id": "cordova-plugin-image-recognition",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MhdFeras/cordova-plugin-image-recognition"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "plugin",
+    "ecosystem:cordova",
+    "cordova-android",
+    "augmented reality",
+    "AR",
+    "EasyAR",
+    "image recognition"
+  ],
+  "author": "MHD Feras Allaham <mhdferas88@gmail.com> (https://github.com/MhdFeras)",
+  "license": "MIT"
+}
