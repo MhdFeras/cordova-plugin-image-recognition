@@ -1,6 +1,6 @@
 # cordova-plugin-image-recognition
 
-A fast, energy efficient, image recognition plugin for Cordova apps, for now it's only available for __Android__.
+image recognition plugin for Cordova apps, for now it's only available for __Android__.
 
 it used the amazing __EasyAR 2.1.0__ free services to recognise specified images
 
