@@ -63,9 +63,9 @@ function getList(imagesList)
     var _data = {"images" :[]};
     for(var i=0;i<ImageRecognition._imagesList.images.length;i++)
     {
-        image = ImageRecognition._imagesList.images[i];
-        image.image = "www/"+image.image
-        _data.images.push(image);
+        image = ImageRecognition._imagesList.images[i].image;
+        name = ImageRecognition._imagesList.images[i].name;
+        _data.images.push({"image": "www/"+image,"name":name});
     }
     return JSON.stringify(_data);
 }
