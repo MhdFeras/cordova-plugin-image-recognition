@@ -1,6 +1,6 @@
 # cordova-plugin-image-recognition
 
-image recognition plugin for Cordova apps, for now it's only available for __Android__.
+image recognition plugin for Cordova apps, ( for now it's only available for __Android__ ).
 
 it used the amazing __EasyAR 2.1.0__ free services to recognise specified images
 
@@ -27,7 +27,7 @@ to use this plugin you have to get EasyAR SDK License Key for each application
 - click __Confirm__
 - that will generate __SDK License Key__ for your application 
 
-There are two primary steps to integrating `cordova-plugin-image-recognition`.
+There are two primary steps to integrating `cordova-plugin-image-recognition`:
 
 #### 1. Init
 
@@ -57,7 +57,7 @@ Later in your application, simply call the __start__ to open camera and start lo
 ```js
 function successCallback (res) { alert(res); }
 function failureCallback (err) { alert(err); }
-window.ImageRecognition.srart(successCallback, failureCallback);
+window.ImageRecognition.start(successCallback, failureCallback);
 ```
 
 when camera recognise one of the specified images, successCallback will called and it will pass the recognised image name as argument.
@@ -65,6 +65,8 @@ when camera recognise one of the specified images, successCallback will called a
 ## API
 
 ### init
+
+set EasyAR SDK License Key 
 
 ```js
 window.ImageRecognition.init("EasyAR_SDK_License_Key");
@@ -90,7 +92,7 @@ start looking for the images that specified to be recognised
 ```js
 function successCallback (res) { alert(res); }
 function failureCallback (err) { alert(err); }
-window.ImageRecognition.srart(successCallback, failureCallback);
+window.ImageRecognition.start(successCallback, failureCallback);
 ```
 
 ### addImage
